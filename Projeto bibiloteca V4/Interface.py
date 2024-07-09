@@ -14,6 +14,7 @@ class Interface(Catalog):
               7 - Sair\n''')
         while True:
             option = input("Digite a opção: ")
+            print("")
             if option == "1":
                 self.add_book_interface()
             elif option == "2":
@@ -59,7 +60,4 @@ class Interface(Catalog):
 
     def search_book_interface(self):
         title = input("Digite o título do livro a ser pesquisado: ")
-        self.show_book(title) 
-
-interface = Interface()
-interface.index()
+        self.show_book(title)

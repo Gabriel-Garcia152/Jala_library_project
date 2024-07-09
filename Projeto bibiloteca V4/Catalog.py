@@ -3,6 +3,7 @@ class Catalog:
         self.book_list = []
 
     def show_catalog(self):
+        print("Todos os livros do catálogo")
         for book in self.book_list:
             self.format_book_data(book)
 
@@ -21,6 +22,7 @@ class Catalog:
     def show_by_topic(self, topic):
         found_books = self.search_by_topic(topic)
         if type(found_books) == list:
+            print(f"Livros do tópico {topic} encontrados:")
             for book in found_books:
                 self.format_book_data(book)
         else:
@@ -41,6 +43,7 @@ class Catalog:
     def show_by_author(self, author):
         found_books = self.search_by_author(author)
         if type(found_books) == list:
+            print(f"Livros do autor {author} encontrados: ")
             for book in found_books:
                 self.format_book_data(book)
         else:
@@ -59,6 +62,7 @@ class Catalog:
     def show_book(self, title):
         book = self.search_book(title)
         if type(book) != str:
+            print(f"Livro com o título {title} encontrado:")
             self.format_book_data(book)
         else:
             print(book)
